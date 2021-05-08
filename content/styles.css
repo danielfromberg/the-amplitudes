@@ -15,7 +15,7 @@ body {
     display: grid;
     grid-template-columns: 1fr;
 }
-
+/*it's not buttons it's just a sticker over the plasic*/
 header {
     background-color: transparent;
     background: url('word-header.png');
@@ -25,7 +25,6 @@ header {
     margin-bottom: 1em;
 }
 
-    
 /* document panel styling, modified from https://cssdeck.com/blog/word-style-outline/ */
 #docpg {	
 	background-color: #ffffff;
@@ -71,6 +70,51 @@ a:link { color:#0000EE;}
 a:visited { color: #551A8B;}
 a:hover {color: red;}
 a:active{color: magenta;
+}
+
+/* rough mobile formatting */ 
+@media only screen and (max-device-width: 760px) {
+    body {
+        background-color: #ececec; 
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100vw;
+        overflow-x: hidden;
+    }
+    header {
+        background-color: transparent;
+        background: url('word-header.png');
+        background-repeat: no-repeat;
+        width: 100vw;
+        height: 160px;
+        margin-bottom: 1em;
+    }    
+    #docpg {	
+	    background-color: #ffffff;
+        margin: 0;
+        margin-left: 1px;
+        margin-right: 1px;
+        margin-bottom: 1em;
+        width: calc(100vw - 22px);
+        height: 11in;
+	    border: 1px solid #d8d8d8;
+	    border-right-width: 3px;
+	    border-bottom-width: 3px;
+        padding-left: 10px;
+        padding-right: 10px;
+        font-family: "Times New Roman", Times, serif; 
+        line-height: 1.5;
+    }
+    p, h1, a, iframe {
+        width: calc(100% - 20px);
+        padding-left: 10px;
+        padding-right: 10px; 
+    }
+    #docpg img, video {
+        width: calc(100% - 20px);
+        padding-left: 10px;
+        padding-right: 10px;
+    }
 }
 
 /* header switch-out method="stupid" */
@@ -123,56 +167,3 @@ a:active{color: magenta;
     }
 }
 
-
-/* rough mobile formatting */ 
-@media only screen and (max-device-width: 760px) {
-/* laying down the law */ 
-body {
-    background-color: #ececec; 
-    display: grid;
-    grid-template-columns: 1fr;
-    width: 100vw;
-    overflow-x: hidden;
-}
-
-header {
-    background-color: transparent;
-    background: url('word-header.png');
-    background-repeat: no-repeat;
-    width: 100vw;
-    height: 160px;
-    margin-bottom: 1em;
-}
-
-    
-/* document panel styling, modified from https://cssdeck.com/blog/word-style-outline/ */
-#docpg {	
-	background-color: #ffffff;
-    margin: 0;
-    margin-left: 1px;
-    margin-right: 1px;
-    margin-bottom: 1em;
-    width: calc(100vw - 22px);
-    height: 11in;
-	border: 1px solid #d8d8d8;
-	border-right-width: 3px;
-	border-bottom-width: 3px;
-    padding-left: 10px;
-    padding-right: 10px;
-    font-family: "Times New Roman", Times, serif; 
-    line-height: 1.5;
-}
-
-p, h1, a {
-    width: calc(100% - 20px);
-    padding-left: 10px;
-    padding-right: 10px; 
-}
-/* media styling matching page width */ 
-#docpg img, video {
-    width: calc(100% - 20px);
-    padding-left: 10px;
-    padding-right: 10px;
-}
-
-}
