@@ -32,7 +32,7 @@ header {
     margin-top: 0 auto;
     margin-bottom: 1em;
     width: 33em;
-    height: 11in;
+    min-height: 11in;
 	border: 1px solid #d8d8d8;
 	border-right-width: 3px;
 	border-bottom-width: 3px;
@@ -96,7 +96,7 @@ a:active{color: magenta;
         margin-right: 1px;
         margin-bottom: 1em;
         width: calc(100vw - 22px);
-        height: 11in;
+        min-height: 11in;
 	    border: 1px solid #d8d8d8;
 	    border-right-width: 3px;
 	    border-bottom-width: 3px;
