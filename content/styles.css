@@ -170,10 +170,9 @@ a:active{color: magenta;
 
 /* safari fuckin sucks! */
 @media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0)
-{ @media {
+{
     #docpg {
         min-height: 11in;
         max-height: 99999999999999px;
-    }
     }
 }
