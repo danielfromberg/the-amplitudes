@@ -73,20 +73,6 @@ a:hover {color: red;}
 a:active{color: magenta;
 }
 
-
-/* rough, yet final, mobile formatting */ 
-@media only screen and (max-device-width: 760px) {
-    #docpg {	
-        width: calc(100vw - 20px);
-        padding: 10px;
-    }
-    img {
-        width: 100vw;
-        padding: 0;
-    }
-}
-
-
 /* header switch-out method="stupid" */
 @media (max-width: 1408px) {
     header {
@@ -135,4 +121,57 @@ a:active{color: magenta;
         background: url('word-header9.png');
         height: 160px;
     }
+}
+
+
+/* rough mobile formatting */ 
+@media only screen and (max-device-width: 760px) {
+/* laying down the law */ 
+body {
+    background-color: #ececec; 
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    
+}
+
+header {
+    background-color: transparent;
+    background: url('word-header.png');
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 160px;
+    margin-bottom: 1em;
+}
+
+    
+/* document panel styling, modified from https://cssdeck.com/blog/word-style-outline/ */
+#docpg {	
+	background-color: #ffffff;
+    margin: 0;
+    margin-top: 0;
+    margin-bottom: 1em;
+    width: calc(100vw - 20px);
+    height: 11in;
+	border: 1px solid #d8d8d8;
+	border-right-width: 3px;
+	border-bottom-width: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: "Times New Roman", Times, serif; 
+    line-height: 1.5;
+}
+
+p, h1, a {
+    width: calc(100% - 20px);
+    padding-left: 10px;
+    padding-right: 10px; 
+}
+/* media styling matching page width */ 
+#docpg img, video {
+    width: calc(100% - 20px);
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
 }
