@@ -1,0 +1,129 @@
+/* everything defaults to default */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+    list-style: none;
+}
+/* laying down the law */ 
+body {
+    background-color: #ececec; 
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+header {
+    background-color: transparent;
+    background: url('word-header.png');
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 160px;
+}
+
+    
+/* document panel styling, modified from https://cssdeck.com/blog/word-style-outline/ */
+#docpg {	
+	background-color: #ffffff;
+    margin: 0 auto;
+    margin-top: 0 auto;
+    margin-bottom: 1em;
+    width: 33em;
+    height: 11in;
+	border: 1px solid #d8d8d8;
+	border-right-width: 3px;
+	border-bottom-width: 3px;
+	padding: 5em 6em;
+    font-family: "Times New Roman", Times, serif; 
+    line-height: 1.5;
+}
+/* media styling matching page width */ 
+#docpg img, video {
+    width: 33em;
+}
+/*titles*/ 
+#docpg h1{
+font-weight: bold;
+}
+
+/* keeping embeds clean */
+iframe {
+    overflow: hidden;
+}
+
+/*superscript formatting for my measly single footnote from https://stackoverflow.com/questions/501671/superscript-in-css-only#501689 */ 
+.superscript { position: relative; top: -0.5em; font-size: 80%; 
+}
+
+
+/* highlight color */
+::selection {
+    background-color:yellow;
+    color: black;
+}
+
+/* link color */
+a:link { color:#0000EE;}
+a:visited { color: #551A8B;}
+a:hover {color: red;}
+a:active{color: magenta;
+}
+
+
+/* rough, yet final, mobile formatting */ 
+@media only screen and (max-device-width: 760px) {
+    #docpg {	
+        width: calc(100vw - 20px);
+        padding: 10px;
+    }
+    img {
+        width: 100vw;
+        padding: 0;
+    }
+}
+
+
+/* header switch-out method="stupid" */
+@media (max-width: 1408px) {
+    header {
+        background: url('word-header2.png');
+    }
+}
+@media (max-width: 1337px) {
+    header {
+        background: url('word-header3.png');
+    }
+}
+@media (max-width: 1263px) {
+    header {
+        background: url('word-header4.png');
+    }
+}
+@media (max-width: 1115px) {
+    header {
+        background: url('word-header5.png');
+    }
+}
+@media (max-width: 986px) {
+    header {
+        background: url('word-header6.png');
+    }
+}
+@media (max-width: 867px) {
+    header {
+        background: url('word-header7.png');
+    }
+}
+@media (max-width: 793px) {
+    header {
+        background: url('word-header8.png');
+    }
+}
+@media (max-width: 639px) {
+    header {
+        background: url('word-header9.png');
+    }
+}
