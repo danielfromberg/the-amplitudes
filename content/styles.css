@@ -91,40 +91,48 @@ a:active{color: magenta;
 @media (max-width: 1408px) {
     header {
         background: url('word-header2.png');
+        height: 159px;
     }
 }
 @media (max-width: 1337px) {
     header {
         background: url('word-header3.png');
+        height: 161px;
     }
 }
 @media (max-width: 1263px) {
     header {
         background: url('word-header4.png');
+        height: 162px;
     }
 }
 @media (max-width: 1115px) {
     header {
         background: url('word-header5.png');
+        height: 160px;
     }
 }
-@media (max-width: 986px) {
+@media (max-width: 985px) {
     header {
         background: url('word-header6.png');
+        height: 158px;
     }
 }
 @media (max-width: 867px) {
     header {
         background: url('word-header7.png');
+        height: 156px;
     }
 }
 @media (max-width: 793px) {
     header {
         background: url('word-header8.png');
+        height: 159px;
     }
 }
 @media (max-width: 639px) {
     header {
         background: url('word-header9.png');
+        height: 160px;
     }
 }
