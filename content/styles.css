@@ -33,6 +33,7 @@ header {
     margin-bottom: 1em;
     width: 33em;
     min-height: 11in;
+    max-height: 99999999999999px;
 	border: 1px solid #d8d8d8;
 	border-right-width: 3px;
 	border-bottom-width: 3px;
@@ -164,15 +165,5 @@ a:active{color: magenta;
     header {
         background: url('word-header9.png');
         height: 160px;
-    }
-}
-
-
-/* safari fuckin sucks! */
-@media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0)
-{
-    #docpg {
-        min-height: 11in;
-        max-height: 99999999999999px;
     }
 }
