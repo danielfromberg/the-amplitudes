@@ -167,3 +167,16 @@ a:active{color: magenta;
         height: 160px;
     }
 }
+
+input[type=text], select {
+    font-family: 'Times New Roman', Times, serif;
+    width: 100%;
+    height: 11in;
+    padding: 0 0;
+    margin: 0 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    color: black;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
