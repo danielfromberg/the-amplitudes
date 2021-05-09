@@ -9,9 +9,9 @@
     background: transparent;
     list-style: none;
 }
-/* laying down the law */ 
+/* laying down the law */
 body {
-    background-color: #ececec; 
+    background-image: linear-gradient(black 1000px, #ececec 100%);
     display: grid;
     grid-template-columns: 1fr;
 }
@@ -24,9 +24,21 @@ header {
     height: 160px;
     margin-bottom: 1em;
 }
+#light-theme {
+  background: url('media/light-theme/word-header.png');
+    background-color: transparent;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 160px;
+    margin-bottom: 1em;
+    padding-top: -1em;
+    padding-bottom: -1em;
+}
+
+
 
 /* document panel styling, modified from https://cssdeck.com/blog/word-style-outline/ */
-#docpg {	
+.docpg {
 	background-color: #ffffff;
     margin: 0 auto;
     margin-top: 0 auto;
@@ -34,19 +46,20 @@ header {
     width: 33em;
     min-height: 11in;
     max-height: 99999999999999px;
-	border: 1px solid #d8d8d8;
-	border-right-width: 3px;
-	border-bottom-width: 3px;
+	border: 3px solid #d8d8d8;
+	border-right-width: 4px;
+	border-bottom-width: 4px;
 	padding: 5em 6em;
-    font-family: "Times New Roman", Times, serif; 
+    font-family: "Times New Roman", Times, serif;
     line-height: 1.5;
+    text-align: justify;
 }
-/* media styling matching page width */ 
-#docpg img, video {
+/* media styling matching page width */
+.docpg img, video {
     width: 33em;
 }
-/*titles*/ 
-#docpg h1{
+/*titles*/
+.docpg h1{
 font-weight: bold;
 }
 
@@ -55,15 +68,26 @@ iframe {
     overflow: hidden;
 }
 
-/*superscript formatting for my measly single footnote from https://stackoverflow.com/questions/501671/superscript-in-css-only#501689 */ 
-.superscript { position: relative; top: -0.5em; font-size: 80%; 
+/*superscript formatting for my measly single footnote from https://stackoverflow.com/questions/501671/superscript-in-css-only#501689 */
+.superscript { position: relative; top: -0.5em; font-size: 80%;
 }
 
 
 /* highlight color */
 ::selection {
-    background-color:yellow;
-    color: black;
+    background-color: black;
+    color: cyan;
+}
+p::selection {
+    background-color: black;
+    color: white;
+}
+.lI > p::selection {
+  background-color: #c3e2ff;
+  color: black;
+}
+br::selection {
+  background-color: transparent;
 }
 
 /* link color */
@@ -73,97 +97,154 @@ a:hover {color: red;}
 a:active{color: magenta;
 }
 
-            /* rough, yet final, mobile formatting */ 
-            @media only screen and (max-device-width: 760px) {
-                body {
-                    background-color: #ececec; 
-                    display: grid;
-                    grid-template-columns: 1fr;
-                    width: 100vw;
-                    overflow-x: hidden;
-                }
-                header {
-                    background-color: transparent;
-                    background: url('media/word-header9.png');
-                    background-repeat: no-repeat;
-                    width: 100vw;
-                    height: 160px;
-                    margin-bottom: 1em;
-                }    
-                #docpg {	
-                    background-color: #ffffff;
-                    margin: 0;
-                    margin-left: 1px;
-                    margin-right: 1px;
-                    margin-bottom: 1em;
-                    width: calc(100vw - 22px);
-                    min-height: 11in;
-                    border: 1px solid #d8d8d8;
-                    border-right-width: 3px;
-                    border-bottom-width: 3px;
-                    padding-left: 10px;
-                    padding-right: 10px;
-                    font-family: "Times New Roman", Times, serif; 
-                    line-height: 1.5;
-                }
-                p, h1, a, iframe {
-                    width: calc(100% - 20px);
-                    padding-left: 10px;
-                    padding-right: 10px; 
-                }
-                #docpg img, video {
-                    width: calc(100% - 20px);
-                    padding-left: 10px;
-                    padding-right: 10px;
-                }
-            }
+                              /* rough, yet final, mobile formatting */
+                              @media only screen and (max-device-width: 760px) {
+                                  body {
+                                      background-color: #ececec;
+                                      display: grid;
+                                      grid-template-columns: 1fr;
+                                      width: 100vw;
+                                      overflow-x: hidden;
+                                  }
+                                  header {
+                                      background-color: transparent;
+                                      background: url('media/word-header9.png');
+                                      background-repeat: no-repeat;
+                                      width: 100vw;
+                                      height: 160px;
+                                      margin-bottom: 1em;
+                                  }
+                                  .docpg {
+                                      background-color: #ffffff;
+                                      margin: 0;
+                                      margin-left: 1px;
+                                      margin-right: 1px;
+                                      margin-bottom: 1em;
+                                      width: calc(100vw - 22px);
+                                      min-height: 11in;
+                                      border: 1px solid #d8d8d8;
+                                      border-right-width: 3px;
+                                      border-bottom-width: 3px;
+                                      padding-left: 10px;
+                                      padding-right: 10px;
+                                      font-family: "Times New Roman", Times, serif;
+                                      line-height: 1.5;
+                                  }
+                                  p, h1, a, iframe {
+                                      width: calc(100% - 20px);
+                                      padding-left: 10px;
+                                      padding-right: 10px;
+                                  }
+                                  .docpg img, video {
+                                      width: calc(100% - 20px);
+                                      padding-left: 10px;
+                                      padding-right: 10px;
+                                  }
+                              }
 
 /* header switch-out method="stupid" */
 @media (max-width: 1408px) {
-    header {
+    #night-theme {
         background: url('media/word-header2.png');
         height: 159px;
     }
 }
 @media (max-width: 1337px) {
-    header {
+    #night-theme {
         background: url('media/word-header3.png');
         height: 161px;
     }
 }
 @media (max-width: 1263px) {
-    header {
+    #night-theme {
         background: url('media/word-header4.png');
         height: 162px;
     }
 }
 @media (max-width: 1115px) {
-    header {
+    #night-theme {
         background: url('media/word-header5.png');
         height: 160px;
     }
 }
 @media (max-width: 985px) {
-    header {
+    #night-theme {
         background: url('media/word-header6.png');
         height: 158px;
     }
 }
 @media (max-width: 867px) {
-    header {
+    #night-theme {
         background: url('media/word-header7.png');
         height: 156px;
     }
 }
 @media (max-width: 793px) {
-    header {
+    #night-theme {
         background: url('media/word-header8.png');
         height: 159px;
     }
 }
 @media (max-width: 639px) {
-    header {
+    #night-theme {
         background: url('media/word-header9.png');
         height: 160px;
     }
+}
+@media (max-width: 1408px) {
+    #light-theme {
+        background: url('media/light-theme/word-header2.png');
+        height: 159px;
+    }
+}
+@media (max-width: 1337px) {
+    #light-theme {
+        background: url('media/light-theme/word-header3.png');
+        height: 161px;
+    }
+}
+@media (max-width: 1263px) {
+    #light-theme {
+        background: url('media/light-theme/word-header4.png');
+        height: 162px;
+    }
+}
+@media (max-width: 1115px) {
+    #light-theme {
+        background: url('media/light-theme/word-header5.png');
+        height: 160px;
+    }
+}
+@media (max-width: 985px) {
+    #light-theme {
+        background: url('media/light-theme/word-header6.png');
+        height: 158px;
+    }
+}
+@media (max-width: 867px) {
+    #light-theme {
+        background: url('media/light-theme/word-header7.png');
+        height: 156px;
+    }
+}
+@media (max-width: 793px) {
+    #light-theme {
+        background: url('media/light-theme/word-header8.png');
+        height: 159px;
+    }
+}
+@media (max-width: 639px) {
+    #light-theme {
+        background: url('media/light-theme/word-header9.png');
+        height: 160px;
+    }
+}
+
+
+.epigraph {
+  font-style: italic;
+}
+
+.epigraph2 {
+  text-align: right;
 }
