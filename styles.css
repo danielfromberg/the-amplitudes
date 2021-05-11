@@ -71,7 +71,11 @@ iframe {
 }
 
 /*superscript formatting for my measly single footnote from https://stackoverflow.com/questions/501671/superscript-in-css-only#501689 */
-.superscript { position: relative; top: -0.5em; font-size: 80%;
+.superscript {
+  position: relative;
+  top: -0.5em;
+  font-size: 80%;
+  font-style: normal;
 }
 
 
